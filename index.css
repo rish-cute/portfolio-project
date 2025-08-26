@@ -1,0 +1,449 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Header styling */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #4a69bd; /* Soft Blue */
+  color: #ffffff; /* White */
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+/*transition using ease*/
+.navbar ul li a {
+  color: #ffffff; /* White */
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #ffdd57; /*Yellow */
+}
+
+/* Toggle button */
+.toggle-btn {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Home Section */
+.home-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 10%;
+  background: #2d3e50; /*Dark Gray */
+  color: #ffffff; /* White */
+  min-height: 100vh;
+}
+
+.home-content {
+  max-width: 50%;
+}
+
+.home-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.home-content h1 span {
+  color: #ffdd57; /* Yellow */
+}
+
+.home-content p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+/* Resume Button */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #ffdd57; /* Yellow */
+  color: #2d3e50; /* Dark Gray */
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background: #f1c40f; /* Bright Yellow */
+  transform: scale(1.05);
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  margin-right: 15px;
+  display: inline-block;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+
+/* Profile Image using transition rotate */
+.home-image img {
+  width: 280px;
+  border-radius: 50%;
+  border: 3px solid #ffdd57; /* Yellow */
+  transition: transform 0.5s ease-in-out;
+}
+
+.home-image img:hover {
+  transform: rotate(5deg) scale(1.05);
+}
+
+/* About Section using hover transform */
+.about-section {
+  background: #4a69bd; /* Soft Blue */
+  color: #ffffff; /* White */
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #ffdd57; /* Yellow */
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+  text-align: left;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.about-image img {
+  width: 250px;
+  border-radius: 10px;
+  border: 2px solid #ffdd57; /* Yellow */
+  transition: transform 0.4s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Skills Section using progress bar */
+.skills-section {
+  background: #2d3e50; /* Dark Gray */
+  color: #ffffff; /* White */
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.skills-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #ffdd57; /* Yellow */
+}
+
+.skills-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.skill {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.skill p {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.progress-bar {
+  background: #34495e; /* Darker Gray */
+  border-radius: 20px;
+  overflow: hidden;
+}
+/*transition using ease-in-out helps to do starts slow ,speed in middle and end again slow */
+.progress {
+  background: #ffdd57; /* Yellow */
+  color: #2d3e50; /* Dark Gray */
+  padding: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 20px;
+  text-align: right;
+  transition: width 1s ease-in-out;
+}
+
+.progress.html { width: 80%; }
+.progress.css { width: 80%; }
+.progress.ds { width: 70%; }
+.progress.python { width: 75%; }
+.progress.ml { width: 65%; }
+
+
+/* Certifications Section using display grid to display it as grids*/
+.cert-section {
+  background: #4a69bd; /* Soft Blue */
+  color: #ffffff; /* White */
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.cert-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #ffdd57; /* Yellow */
+}
+
+.cert-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.cert-card {
+  background: #34495e; /* Darker Gray */
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #233554; /* Darker Gray */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-card h3 {
+  margin-bottom: 10px;
+  color: #ffdd57; /* Yellow */
+}
+
+.cert-card p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.cert-card .btn {
+  padding: 8px 15px;
+}
+
+.cert-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* Projects Section using hover pseudo class we can apply shadow effects to box */
+.projects-section {
+  background: #34495e; /* Darker Gray */
+  color: #ffffff; /* White */
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.projects-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #ffdd57; /* Yellow */
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background: #4a69bd; /* Soft Blue */
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #233554; /* Darker Gray */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card h3 {
+  margin-bottom: 10px;
+  color: #ffdd57; /* Yellow */
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* Contact Section */
+.contact-section {
+  background: #4a69bd; /* Soft Blue */
+  color: #ffffff; /* White */
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #ffdd57; /* Yellow */
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #233554; /* Darker Gray */
+  border-radius: 8px;
+  background: #34495e; /* Darker Gray */
+  color: #ffffff; /* White */
+  font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border: 1px solid #ffdd57; /* Yellow */
+}
+
+.contact-form .btn {
+  background: #ffdd57; /* Yellow */
+  color: #2d3e50; /* Dark Gray */
+  border: none;
+  cursor: pointer;
+}
+
+.contact-form .btn:hover {
+  background: #f1c40f; /* Bright Yellow */
+}
+
+/* Footer Section */
+.site-footer {
+  background: #34495e; /* Darker Gray */
+  color: #ffffff; /* White */
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-buttons {
+  margin-top: 10px;
+}
+
+.footer-buttons .btn {
+  margin: 0 10px;
+  padding: 8px 15px;
+  background: #ffdd57; /* Yellow */
+  color: #2d3e50; /* Dark Gray */
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.footer-buttons .btn:hover {
+  background: #f1c40f; /* Bright Yellow */
+}
+
+/* Responsive Design using media query */
+
+/* For Tablets (iPad Mini) with the help of view inspect we can know dimensions */
+@media (max-width: 768px) {
+  .home-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-content {
+    max-width: 100%;
+  }
+
+  .home-image img {
+    margin-top: 20px;
+    width: 200px;
+  }
+
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cert-container,
+  .projects-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* For Mobile (Samsung Galaxy S8+) with the help of view inspect we can know dimensions*/
+@media (max-width: 480px) {
+  .site-header {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .home-section {
+    padding: 40px 5%;
+  }
+
+  .home-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .home-image img {
+    width: 150px;
+  }
+
+  .cert-container,
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+}
